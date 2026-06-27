@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estoca — Previsão inteligente de demanda para supermercados</title>
+  <meta name="description" content="A Estoca lê o histórico de vendas e o estoque atual do seu mercado para prever a demanda de cada produto e avisar a hora certa de repor. Integração nativa com Consinco/TOTVS.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <nav class="nav__inner">
+      <a href="#topo" class="brand">
+        <span class="brand__mark"><span class="brand__mark-inner"></span></span>
+        <span class="brand__name">Estoca</span>
+      </a>
+      <div class="nav__links">
+        <a href="#recursos" class="nav__link">Recursos</a>
+        <a href="#como-funciona" class="nav__link">Como funciona</a>
+        <a href="#integracao" class="nav__link">Integração</a>
+        <a href="#contato" class="btn btn--yellow btn--sm">Entrar em contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="topo" class="hero">
+    <div class="hero__glow"></div>
+    <div class="hero__inner container">
+
+      <div class="hero__copy">
+        <div class="eyebrow eyebrow--pill">
+          <span class="eyebrow__dot"></span>
+          <span class="eyebrow__text">Previsão inteligente de demanda</span>
+        </div>
+        <h1 class="hero__title">Saiba o que repor, quanto e quando — <span class="hl">antes de faltar.</span></h1>
+        <p class="hero__lead">A Estoca lê o histórico de vendas e o estoque atual do seu mercado para prever a demanda de cada produto e avisar a hora certa de repor. Menos ruptura na gôndola, menos capital parado no depósito.</p>
+        <div class="hero__cta">
+          <a href="#contato" class="btn btn--yellow btn--lg btn--glow">Entrar em contato</a>
+          <a href="#como-funciona" class="btn btn--ghost btn--lg">Ver como funciona</a>
+        </div>
+        <div class="hero__erp">
+          <span class="hero__erp-label">Integração nativa com</span>
+          <span class="chip">Consinco</span>
+          <span class="chip">TOTVS</span>
+        </div>
+      </div>
+
+      <!-- Dashboard mock card -->
+      <div class="hero__visual">
+        <div class="mock">
+          <div class="mock__head">
+            <div class="mock__head-left">
+              <span class="dot dot--live"></span>
+              <span class="mock__title">Mercado Central · Visão geral</span>
+            </div>
+            <span class="badge-live">AO VIVO</span>
+          </div>
+
+          <div class="mock__stats">
+            <div class="stat-card">
+              <div class="stat-card__label">Ruptura</div>
+              <div class="stat-card__value">1,8%</div>
+              <div class="stat-card__delta stat-card__delta--good">▼ 4,2 pts</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__label">Cobertura</div>
+              <div class="stat-card__value">12<span class="stat-card__unit"> dias</span></div>
+              <div class="stat-card__delta">no alvo</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__label">Acurácia</div>
+              <div class="stat-card__value">94%</div>
+              <div class="stat-card__delta stat-card__delta--good">▲ 1,1 pts</div>
+            </div>
+          </div>
+
+          <div class="mock__chart">
+            <div class="mock__chart-head">
+              <span class="mock__chart-title">Previsão de demanda · Arroz Tipo 1 5kg</span>
+              <span class="mock__chart-unit">un / dia</span>
+            </div>
+            <svg viewBox="0 0 480 150" width="100%" style="display:block">
+              <line x1="0" y1="35" x2="480" y2="35" stroke="#F1F5F9" stroke-width="1"></line>
+              <line x1="0" y1="75" x2="480" y2="75" stroke="#F1F5F9" stroke-width="1"></line>
+              <line x1="0" y1="115" x2="480" y2="115" stroke="#F1F5F9" stroke-width="1"></line>
+              <polygon points="288,58 330,46 372,52 414,32 462,42 462,92 414,78 372,98 330,86 288,86" fill="#FFD400" opacity="0.16"></polygon>
+              <polyline points="16,96 62,82 108,90 154,64 200,74 246,52 288,62" fill="none" stroke="#0B1220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+              <polyline points="288,62 330,52 372,62 414,40 462,52" fill="none" stroke="#E0A800" stroke-width="2.5" stroke-dasharray="2 5" stroke-linecap="round"></polyline>
+              <line x1="288" y1="14" x2="288" y2="128" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"></line>
+              <circle cx="288" cy="62" r="3.5" fill="#0B1220"></circle>
+              <circle cx="462" cy="52" r="4" fill="#E0A800" stroke="#fff" stroke-width="2"></circle>
+              <text x="294" y="24" font-family="JetBrains Mono, monospace" font-size="9" fill="#94A3B8">hoje</text>
+            </svg>
+            <div class="mock__legend">
+              <span class="legend"><span class="legend__line legend__line--hist"></span>Histórico</span>
+              <span class="legend"><span class="legend__line legend__line--fc"></span>Previsão</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- floating alert chip -->
+        <div class="alert-chip">
+          <span class="alert-chip__icon">!</span>
+          <div>
+            <div class="alert-chip__title">Repor Arroz 5kg</div>
+            <div class="alert-chip__sub">Estoque cobre só 3 dias</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== STATS BAND ===================== -->
+  <section class="band">
+    <div class="band__inner container">
+      <div class="band__intro">
+        <div class="band__eyebrow">Resultado</div>
+        <div class="band__desc">O que muda na operação depois da Estoca</div>
+      </div>
+      <div class="band__stat">
+        <div class="band__num band__num--accent">−27%</div>
+        <div class="band__cap">em rupturas de gôndola</div>
+      </div>
+      <div class="band__stat">
+        <div class="band__num">−21%</div>
+        <div class="band__cap">de capital parado em estoque</div>
+      </div>
+      <div class="band__stat">
+        <div class="band__num">3×</div>
+        <div class="band__cap">mais rápido para decidir a reposição</div>
+      </div>
+    </div>
+    <div class="band__note container"><span>* estimativas com base em operações de porte similar</span></div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="recursos" class="section">
+    <div class="container">
+      <div class="section__head">
+        <div class="eyebrow">Recursos do MVP</div>
+        <h2 class="section__title">Tudo o que o gerente precisa, num só painel</h2>
+        <p class="section__lead">Uma interface limpa, orientada à decisão. Sem ruído, sem planilha — só o que importa para manter a gôndola cheia e o estoque enxuto.</p>
+      </div>
+
+      <div class="features">
+
+        <!-- Dashboard -->
+        <article class="feature">
+          <div class="feature__head">
+            <span class="feature__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20"><rect x="2" y="2" width="7" height="7" rx="1.5" fill="#0B1220"></rect><rect x="11" y="2" width="7" height="4" rx="1.5" fill="#E0A800"></rect><rect x="11" y="8" width="7" height="10" rx="1.5" fill="#0B1220"></rect><rect x="2" y="11" width="7" height="7" rx="1.5" fill="#E0A800"></rect></svg>
+            </span>
+            <h3 class="feature__title">Dashboard de indicadores</h3>
+          </div>
+          <p class="feature__text">Ruptura, cobertura, giro e acurácia da previsão em cartões claros. A saúde da operação num relance.</p>
+          <div class="feature__mini-grid">
+            <div class="mini"><div class="mini__label">GIRO</div><div class="mini__value">7,4×</div></div>
+            <div class="mini"><div class="mini__label">SKUs</div><div class="mini__value">8.412</div></div>
+            <div class="mini mini--accent"><div class="mini__label">ALERTAS</div><div class="mini__value">23</div></div>
+          </div>
+        </article>
+
+        <!-- Previsão -->
+        <article class="feature">
+          <div class="feature__head">
+            <span class="feature__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20"><polyline points="2,15 7,10 11,12 18,4" fill="none" stroke="#0B1220" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline><circle cx="18" cy="4" r="2.4" fill="#E0A800"></circle></svg>
+            </span>
+            <h3 class="feature__title">Previsão de demanda</h3>
+          </div>
+          <p class="feature__text">Para cada produto, a projeção de venda dos próximos dias com faixa de confiança — baseada no padrão real de consumo.</p>
+          <div class="feature__panel">
+            <svg viewBox="0 0 300 70" width="100%" style="display:block">
+              <polygon points="170,32 210,24 250,28 290,16 290,46 250,52 210,46 170,52" fill="#FFD400" opacity="0.18"></polygon>
+              <polyline points="8,52 44,44 80,48 116,34 150,40 170,42" fill="none" stroke="#0B1220" stroke-width="2.2" stroke-linecap="round"></polyline>
+              <polyline points="170,42 210,34 250,38 290,28" fill="none" stroke="#E0A800" stroke-width="2.2" stroke-dasharray="2 4" stroke-linecap="round"></polyline>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Alertas -->
+        <article class="feature">
+          <div class="feature__head">
+            <span class="feature__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2 L18 16 L2 16 Z" fill="none" stroke="#0B1220" stroke-width="2" stroke-linejoin="round"></path><rect x="9" y="7" width="2" height="4" rx="1" fill="#E0A800"></rect><circle cx="10" cy="13.5" r="1.2" fill="#E0A800"></circle></svg>
+            </span>
+            <h3 class="feature__title">Alertas de reposição</h3>
+          </div>
+          <p class="feature__text">A Estoca avisa o que está prestes a faltar e sugere a quantidade certa de reposição, antes da ruptura acontecer.</p>
+          <div class="repo-list">
+            <div class="repo-row repo-row--accent"><span class="repo-row__name">Leite Integral 1L</span><span class="repo-row__qty repo-row__qty--accent">repor 240 un</span></div>
+            <div class="repo-row"><span class="repo-row__name">Açúcar Refinado 1kg</span><span class="repo-row__qty">repor 90 un</span></div>
+          </div>
+        </article>
+
+        <!-- Consulta -->
+        <article class="feature">
+          <div class="feature__head">
+            <span class="feature__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="#0B1220" stroke-width="2"></circle><line x1="12.5" y1="12.5" x2="17" y2="17" stroke="#E0A800" stroke-width="2.4" stroke-linecap="round"></line></svg>
+            </span>
+            <h3 class="feature__title">Consulta de produtos e estoque</h3>
+          </div>
+          <p class="feature__text">Busca rápida por produto, com estoque atual e histórico de vendas lado a lado. Tudo direto do seu ERP.</p>
+          <div class="search-box">
+            <div class="search-box__bar"><span class="search-box__circle"></span><span class="search-box__placeholder">buscar produto…</span></div>
+            <div class="search-box__row"><span class="search-box__name">Café Torrado 500g</span><span class="search-box__est">est. 318</span></div>
+            <div class="search-box__row search-box__row--div"><span class="search-box__name">Farinha de Trigo 1kg</span><span class="search-box__est">est. 612</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section id="como-funciona" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <div class="eyebrow">Como funciona</div>
+        <h2 class="section__title">Do ERP à decisão em três passos</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3 class="step__title">Integramos ao seu ERP</h3>
+          <p class="step__text">Conectamos à sua base Consinco/TOTVS e trazemos vendas e estoque automaticamente. O cadastro é feito pela nossa equipe — você não configura nada.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3 class="step__title">Analisamos o histórico</h3>
+          <p class="step__text">Nossos modelos identificam padrões de consumo produto a produto e projetam a demanda futura, com faixa de confiança.</p>
+        </div>
+        <div class="step">
+          <div class="step__num step__num--accent">03</div>
+          <h3 class="step__title">Você decide com clareza</h3>
+          <p class="step__text">Previsões e alertas chegam prontos no painel. O gerente bate o olho e sabe o que repor — sem planilha, sem achismo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTEGRAÇÃO ===================== -->
+  <section id="integracao" class="section">
+    <div class="container integ">
+      <div class="integ__copy">
+        <div class="eyebrow">Integração</div>
+        <h2 class="section__title">Conecta direto ao seu Consinco/TOTVS</h2>
+        <p class="section__lead">Nesta primeira versão trabalhamos exclusivamente com o ERP Consinco/TOTVS, o mais usado pelos supermercados da região. A arquitetura já está preparada para novos conectores no futuro.</p>
+        <div class="checks">
+          <div class="check"><span class="check__mark">✓</span><span class="check__text">Sincronização automática de vendas e estoque</span></div>
+          <div class="check"><span class="check__mark">✓</span><span class="check__text">Cadastro e onboarding feitos pela nossa equipe</span></div>
+          <div class="check"><span class="check__mark">✓</span><span class="check__text">Arquitetura pronta para múltiplos ERPs</span></div>
+        </div>
+      </div>
+
+      <div class="flow">
+        <div class="flow__glow"></div>
+        <div class="flow__pipe">
+          <div class="flow__node">
+            <div class="flow__node-label">ERP</div>
+            <div class="flow__node-name">Consinco</div>
+            <div class="flow__node-sub">TOTVS</div>
+          </div>
+          <svg width="40" height="20" viewBox="0 0 40 20" class="flow__arrow"><line x1="2" y1="10" x2="32" y2="10" stroke="#FFD400" stroke-width="2" stroke-dasharray="3 3"></line><path d="M30 4 L38 10 L30 16 Z" fill="#FFD400"></path></svg>
+          <div class="flow__node flow__node--accent">
+            <div class="flow__node-label flow__node-label--ink">MOTOR</div>
+            <div class="flow__node-name flow__node-name--ink">Estoca</div>
+            <div class="flow__node-sub flow__node-sub--ink">previsão</div>
+          </div>
+          <svg width="40" height="20" viewBox="0 0 40 20" class="flow__arrow"><line x1="2" y1="10" x2="32" y2="10" stroke="#FFD400" stroke-width="2" stroke-dasharray="3 3"></line><path d="M30 4 L38 10 L30 16 Z" fill="#FFD400"></path></svg>
+          <div class="flow__node">
+            <div class="flow__node-label">PAINEL</div>
+            <div class="flow__node-name">Gerente</div>
+            <div class="flow__node-sub">decisão</div>
+          </div>
+        </div>
+        <div class="flow__status">
+          <span class="dot dot--live"></span>
+          <span class="flow__status-text">Sincronização ativa · atualizado há 4 min</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROADMAP ===================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="roadmap__head">
+        <div>
+          <div class="eyebrow">Roadmap</div>
+          <h2 class="section__title section__title--sm">O que vem por aí</h2>
+        </div>
+        <p class="roadmap__desc">Depois do MVP, a plataforma cresce com inteligência sobre preço, sazonalidade e compras.</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Sugestão inteligente de preços</span>
+        <span class="tag">Sazonalidade, promoções e eventos</span>
+        <span class="tag">Relatórios gerenciais</span>
+        <span class="tag">Alertas automáticos</span>
+        <span class="tag">Pedidos automáticos a fornecedores</span>
+        <span class="tag">Múltiplos ERPs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato" class="section">
+    <div class="container contato">
+      <div class="contato__copy">
+        <div class="eyebrow">Contato</div>
+        <h2 class="section__title">Vamos colocar seu estoque sob controle?</h2>
+        <p class="section__lead">Conte um pouco sobre o seu mercado. Nossa equipe faz a integração com o Consinco/TOTVS e configura tudo para você começar a prever a demanda.</p>
+        <div class="bullets">
+          <div class="bullet"><span class="bullet__dot"></span><span class="bullet__text">Demonstração guiada com seus próprios números</span></div>
+          <div class="bullet"><span class="bullet__dot"></span><span class="bullet__text">Onboarding e cadastro feitos pela nossa equipe</span></div>
+          <div class="bullet"><span class="bullet__dot"></span><span class="bullet__text">Sem compromisso</span></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label class="field__label" for="f-name">Nome</label>
+            <input id="f-name" name="name" class="field__input" placeholder="Seu nome" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field__label" for="f-email">E-mail</label>
+              <input id="f-email" name="email" type="email" class="field__input" placeholder="voce@mercado.com" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-phone">Telefone</label>
+              <input id="f-phone" name="phone" class="field__input" placeholder="(00) 00000-0000">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-msg">Mensagem</label>
+            <textarea id="f-msg" name="msg" class="field__input field__input--area" placeholder="Qual o porte do seu mercado e quantas lojas?" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn--yellow btn--block btn--glow">Falar com especialista</button>
+          <p class="form__note">Resposta em até 1 dia útil.</p>
+        </form>
+
+        <div id="contact-success" class="form-success" hidden>
+          <div class="form-success__icon">✓</div>
+          <h3 class="form-success__title">Recebemos seu contato!</h3>
+          <p class="form-success__text">Nossa equipe vai falar com você em breve para agendar a demonstração.</p>
+          <button type="button" id="contact-reset" class="btn btn--ghost btn--sm">Enviar outro</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__brand-col">
+        <div class="brand brand--footer">
+          <span class="brand__mark brand__mark--sm"><span class="brand__mark-inner"></span></span>
+          <span class="brand__name">Estoca</span>
+        </div>
+        <p class="footer__about">Previsão inteligente de demanda e apoio à gestão de estoque para supermercados e atacarejos.</p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__heading">Produto</div>
+        <div class="footer__links">
+          <a href="#recursos" class="footer__link">Recursos</a>
+          <a href="#como-funciona" class="footer__link">Como funciona</a>
+          <a href="#integracao" class="footer__link">Integração</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__heading">Contato</div>
+        <div class="footer__links">
+          <a href="#contato" class="footer__link">Falar com especialista</a>
+          <span class="footer__text">contato@estoca.com.br</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span class="footer__copy">© 2026 Estoca. Todos os direitos reservados.</span>
+      <span class="footer__meta">Integrado a Consinco · TOTVS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
